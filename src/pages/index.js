@@ -1,0 +1,9 @@
+export { default as Home } from "./Home";
+export { default as Item } from "./Item";
+export { default as Cart } from "./Cart";
+export { default as Favorites } from "./Favorites";
+export { default as Order } from "./Order";
+export { default as Contacts } from "./Contacts";
+export { default as Delivery } from "./Delivery";
+export { default as About } from "./About";
+export { default as Payment } from "./Payment";

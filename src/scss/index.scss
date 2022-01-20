@@ -1,0 +1,369 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./variables.scss";
+@import "./components/all";
+
+* {
+   box-sizing: border-box;
+   font-family: "PT Sans", sans-serif;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 16px;
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+i {
+   font-size: 18px;
+   color: #333;
+   cursor: pointer;
+}
+
+.wrapper {
+   padding: 3rem 5rem;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   z-index: 1;
+}
+
+.content {
+   min-height: calc(100vh - 70px);
+
+   &__filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sort {
+         position: relative;
+
+         &__label {
+            display: flex;
+            align-items: center;
+
+            i {
+               margin-right: 8px;
+               cursor: auto;
+            }
+
+            b {
+               margin-right: 8px;
+            }
+
+            span {
+               cursor: pointer;
+               color: rgb(18, 78, 190);
+            }
+         }
+
+         &__popup {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            margin-top: 15px;
+            background: #ffffff;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 160px;
+
+            ul {
+               overflow: hidden;
+               padding-left: 10px;
+
+               li {
+                  padding: 12px 20px;
+                  cursor: pointer;
+                  list-style: none;
+
+                  &:hover {
+                     background: rgba(77, 50, 40, 0.05);
+                  }
+
+                  &.active {
+                     color: rgb(18, 78, 190);
+                  }
+               }
+            }
+         }
+      }
+
+      form {
+         border: 1px solid #f3f3f3;
+         border-radius: 10px;
+         padding: 0 5px;
+         width: 250px;
+
+         input {
+            border: 0;
+            padding: 15px;
+            font-size: 16px;
+            width: 235px;
+
+            outline: none;
+         }
+      }
+   }
+   &__heading {
+      display: flex;
+      justify-content: center;
+
+      .title {
+         font-weight: 400;
+         padding-left: 2rem;
+         opacity: 0.5;
+         cursor: pointer;
+
+         &-active {
+            font-weight: 400;
+            padding-left: 2rem;
+            opacity: 1;
+         }
+      }
+   }
+
+   &__cards {
+      width: 100%;
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: auto;
+      gap: 4rem;
+   }
+   .info {
+      margin-top: 3rem;
+
+      &__heading,
+      .about__heading,
+      span {
+         display: flex;
+         justify-content: center;
+
+         h2 {
+            font-weight: 400;
+         }
+      }
+
+      &__brand {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+
+         img {
+            height: 100px;
+            width: 200px;
+            margin: 2rem;
+         }
+      }
+   }
+}
+
+.about__text {
+   margin-left: 20rem;
+   max-width: 1000px;
+}
+.favorites {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   gap: 3rem;
+}
+
+.card {
+   height: 100%;
+
+   &__image {
+      position: relative;
+      margin-bottom: 0.5rem;
+
+      img {
+         height: 100%;
+         width: 100%;
+         border-radius: 10px;
+      }
+
+      .heart {
+         height: 38px;
+         width: 42px;
+         position: absolute;
+         top: 5px;
+         right: 10px;
+         cursor: pointer;
+      }
+   }
+
+   &__footer {
+      position: relative;
+      margin-top: 2rem;
+
+      img {
+         position: absolute;
+         top: 5px;
+         right: 13px;
+      }
+   }
+   span {
+      font-size: 18px;
+      opacity: 0.8;
+   }
+}
+.footer-icons {
+   display: flex;
+   justify-content: center;
+   margin-top: 3rem;
+
+   i {
+      font-size: 28px;
+      padding-right: 5rem;
+
+      &:hover {
+         color: lighten(#333, 5%);
+      }
+   }
+}
+
+h2 {
+   font-weight: 400;
+}
+
+.cart-container {
+   display: flex;
+   margin-top: 4rem;
+}
+
+.cart__payment {
+   padding-left: 3rem;
+
+   .payment__products,
+   .payment__total {
+      background-color: $grey;
+      display: flex;
+      justify-content: space-between;
+      height: 66px;
+      align-items: center;
+
+      div {
+         padding: 0 2rem;
+      }
+   }
+   div {
+      .btn-cart {
+         font-size: 16px;
+         padding: 1.4rem 11rem;
+         background-color: $red;
+         color: #fff;
+         transition: 0.1s;
+         border: 0;
+         cursor: pointer;
+
+         &:hover {
+            background-color: darken($red, 5%);
+         }
+      }
+   }
+}
+
+.favorites {
+   .card__image {
+      img {
+         height: 355px;
+         width: 250px;
+      }
+      .heart {
+         height: 38px;
+         width: 42px;
+      }
+   }
+}
+
+@media screen and(max-width: 1200px) {
+   .content__cards {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .about__text {
+      margin-left: 0;
+   }
+}
+
+@media screen and(max-width: 900px) {
+   h2 {
+      font-size: 1.3em;
+   }
+
+   .wrapper {
+      padding: 2rem 3rem;
+   }
+
+   .content__cards {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .card {
+      .heart {
+         height: 28px;
+         width: 32px;
+      }
+      span {
+         font-size: 16px;
+      }
+   }
+
+   .footer-icons {
+      i {
+         padding-right: 3rem;
+      }
+   }
+   .cart-container {
+      flex-direction: column;
+   }
+   .cart__payment {
+      padding-left: 0;
+   }
+}
+
+@media screen and(max-width: 600px) {
+   .wrapper {
+      padding: 1rem 2rem;
+   }
+   .content {
+      &__filters {
+         form {
+            width: 200px;
+            input {
+               width: 170px;
+            }
+         }
+         .sort__label {
+            flex-direction: column;
+         }
+         i {
+            display: none;
+         }
+      }
+      &__cards {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   .footer-icons {
+      i {
+         font-size: 24px;
+      }
+   }
+}

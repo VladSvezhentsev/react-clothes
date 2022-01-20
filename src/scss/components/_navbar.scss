@@ -1,0 +1,66 @@
+.navbar {
+   width: 450px;
+   background-color: #fff;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 1;
+   transition: 0.3s;
+   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+   h1 {
+      font-size: 24px;
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0rem 4rem 3rem;
+      align-items: center;
+
+      i {
+         margin-right: 3rem;
+      }
+   }
+
+   ul {
+      padding: 0;
+      margin-left: 3rem;
+
+      li {
+         list-style: none;
+         margin-bottom: 1rem;
+      }
+   }
+
+   .contacts {
+      margin-bottom: 3rem;
+      margin-left: 3rem;
+   }
+
+   i {
+      font-size: 28px;
+
+      margin-left: 3rem;
+
+      &:hover {
+         color: lighten(#333, 5%);
+      }
+   }
+}
+
+@media screen and(max-width: 1200px) {
+   .navbar {
+      width: 400px;
+   }
+}
+
+@media screen and(max-width: 900px) {
+   .navbar {
+      width: 350px;
+
+      i {
+         font-size: 24px;
+      }
+   }
+}
