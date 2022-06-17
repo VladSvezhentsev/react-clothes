@@ -1,7 +1,16 @@
-# Getting Started with Create React App
+# React Clothes
+React Clothes - це інтернет-мазазин одягу. Є можливість додати одяг в закладки, в корзину. В корзині показана загальна вартість, можна добавити і видалити одяг.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Стек
+- ReactJS (hooks)
+- Redux
+- Redux-thunk
+- React Router
+- Axios
 
-### Scripts
+## Швидкий старт
+```git clone https://github.com/VladSvezhentsev/react-clothes.git```
 
-npm run dev
+```npm install```
+
+```npm start```
