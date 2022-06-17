@@ -14,7 +14,7 @@ function CartItem({ item, totalPrice, totalCount, onRemove, onPlus, onMinus }) {
             <div className="item__info">
                <h3>{item.name}</h3>
                <span>({item.size})</span>
-               <p>{item.price} ₴/шт</p>
+               <p>{item.price} $</p>
             </div>
          </div>
          <div className="item__payment">
@@ -24,7 +24,7 @@ function CartItem({ item, totalPrice, totalCount, onRemove, onPlus, onMinus }) {
                <button onClick={handlePlusClick}>+</button>
             </div>
             <div className="payment__price">
-               <h2>{totalPrice} ₴</h2>
+               <h2>{totalPrice} $</h2>
                <i onClick={handleRemoveClick} className="far fa-trash-alt"></i>
             </div>
          </div>

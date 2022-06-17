@@ -1,14 +1,12 @@
 function Contacts() {
    return (
       <>
-         <h1>Контакти</h1>
+         <h1> Contacts </h1>
          <div>
-            <p>
-               Ви можете найти нас за адресою: м. Вінниця, вул. Центральна 44
-            </p>
-            <p>Телефон відділу продажу: 097-92-45-281 (багатоканальний)</p>
-            <p>Телефон відділу оптового продажу: 097-92-45-444</p>
-            <p>Email: sales@gmail.com</p>
+            <p>You can find us at: Vinnytsia, Central st. 44</p>
+            <p> Sales phone number: 097-92-45-281 (multi-channel) </p>
+            <p> Wholesale Phone: 097-92-45-444 </p>
+            <p> Email: sales@gmail.com </p>
          </div>
       </>
    );

@@ -10,7 +10,7 @@ function Header({ onClickMenu }) {
          <div className="header__top">
             <div onClick={onClickMenu} className="menu">
                <i className="fas fa-bars"></i>
-               <span>Меню</span>
+               <span>Menu</span>
             </div>
             <Link to="/">
                <div className="header__logo">

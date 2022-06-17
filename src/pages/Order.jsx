@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { OrderItem } from "../components/";
 
 function Order() {
-   const validName = new RegExp("^[?!,.а-яА-ЯёЁ]+$\\w{3}");
-   const validAddres = new RegExp("^[?!,.а-яА-ЯёЁ]+$\\w{3}");
+   const validName = new RegExp("^[?!,.a-zA-Z]+$\\w{3}");
+   const validAddres = new RegExp("^[?!,.a-zA-Z]+$\\w{3}");
    const validNumber = new RegExp(".?(\\d{3}).*(\\d{3}).*(\\d{4})");
    const [name, setName] = useState("");
    const [address, setAddress] = useState("");
@@ -29,7 +29,7 @@ function Order() {
       if (!validNumber.test(number)) {
          setNumberErr(true);
       } else {
-         alert("Ваше замовлення прийнято");
+         alert("Your order has been accepted!");
       }
    };
 
@@ -38,26 +38,26 @@ function Order() {
          {totalCount ? (
             <div className="order-container">
                <div className="order__info">
-                  <h1>Оформлення замовлення</h1>
+                  <h1>Order</h1>
                   <div className="contacts-block">
-                     <h2>Контактні дані</h2>
+                     <h2>Contacts</h2>
                      <div className="contacts__name">
-                        <span>Контактна особа</span>
+                        <span>Contact person</span>
                         <input
                            type="text"
                            onChange={(e) => setName(e.target.value)}
                            autoFocus
                         />
-                        {nameErr && <p className="error">Введіть ваше ім'я</p>}
+                        {nameErr && <p className="error">Enter your name</p>}
                      </div>
                      <div className="contacts__tel">
-                        <span>Контактний телефон</span>
+                        <span>Contact phone</span>
                         <input
                            type="tel"
                            onChange={(e) => setNumber(e.target.value)}
                         />
                         {numberErr && (
-                           <p className="error">Введіть правильний номер</p>
+                           <p className="error">Enter the correct number</p>
                         )}
                      </div>
                      <div className="contacts__email">
@@ -66,15 +66,15 @@ function Order() {
                      </div>
                   </div>
                   <div className="contacts__delivery">
-                     <h2>Доставка</h2>
+                     <h2>Delivery</h2>
                      <div className="delivery__place">
-                        <span>Населений пункт</span>
+                        <span>Address</span>
                         <input
                            type="text"
                            onChange={(e) => setAddress(e.target.value)}
                         />
                         {addressErr && (
-                           <p className="error">Введіть ваш населений пункт</p>
+                           <p className="error">Enter your addrress</p>
                         )}
                      </div>
                      <div className="delivery__variants">
@@ -90,13 +90,13 @@ function Order() {
                               />
                               <label htmlFor="deliveryChoice1">
                                  <div>
-                                    <p>Самовивіз</p>
-                                    <span>На пункті видачі</span>
+                                    <p>Self-pickup</p>
+                                    <span>At the point of issue</span>
                                  </div>
                               </label>
                            </div>
                            <div className="price">
-                              <b>+ 0 ₴</b>
+                              <b>+ 0 $</b>
                            </div>
                         </div>
                         <div className="variant">
@@ -110,13 +110,15 @@ function Order() {
                               />
                               <label htmlFor="deliveryChoice2">
                                  <div>
-                                    <p>Новою Поштою</p>
-                                    <span>Із відділення Нової Пошти</span>
+                                    <p>Nova Poshta</p>
+                                    <span>
+                                       From the department of Nova Poshta
+                                    </span>
                                  </div>
                               </label>
                            </div>
                            <div className="price">
-                              <b>+ 50 ₴</b>
+                              <b>+ 2 $</b>
                            </div>
                         </div>
                         <div className="variant">
@@ -130,25 +132,25 @@ function Order() {
                               />
                               <label htmlFor="deliveryChoice3">
                                  <div>
-                                    <p>Кур'єром</p>
-                                    <span>Доставка кур'єром</span>
+                                    <p>By courier</p>
+                                    <span>Delivery by courier</span>
                                  </div>
                               </label>
                            </div>
                            <div className="price">
-                              <b>+ 100 ₴</b>
+                              <b>+ 5 $</b>
                            </div>
                         </div>
                      </div>
                      <div className="textarea-block">
                         <div className="textarea">
-                           <span>Коментар до замовлення</span>
+                           <span>Comment on the order</span>
                            <textarea rows="5"></textarea>
                         </div>
                      </div>
                   </div>
                   <div className="order__payment">
-                     <h2>Спосіб оплати</h2>
+                     <h2>Payment method</h2>
                      <div className="payment__label">
                         <div className="label">
                            <input
@@ -159,7 +161,7 @@ function Order() {
                               defaultChecked
                            />
                            <label htmlFor="paymentChoice1">
-                              <p>Готівкою</p>
+                              <p>In cash</p>
                            </label>
                         </div>
                         <div className="label">
@@ -170,13 +172,11 @@ function Order() {
                               id="paymentChoice2"
                            />
                            <label htmlFor="paymentChoice2">
-                              <p>Карткою</p>
+                              <p>By card</p>
                            </label>
                         </div>
                      </div>
-                     <button onClick={handleNewOrder}>
-                        Підтвердити замовлення
-                     </button>
+                     <button onClick={handleNewOrder}>Confirm order</button>
                   </div>
                </div>
                <div className="order__items">
@@ -190,23 +190,23 @@ function Order() {
                   <div className="items__total">
                      <div className="subtotal">
                         <div>
-                           <span>Сума по товарам</span>
-                           <b>{totalPrice} ₴</b>
+                           <span>Amount</span>
+                           <b>{totalPrice} $</b>
                         </div>
                         <div>
-                           <span>Вартість доставки</span>
-                           <b>{deliveryPrice} ₴</b>
+                           <span>Shipping cost</span>
+                           <b>{deliveryPrice} $</b>
                         </div>
                      </div>
                      <div className="total">
-                        <p>Всього</p>
+                        <p>Total</p>
                         <b>{totalPrice + Number(deliveryPrice)} ₴</b>
                      </div>
                   </div>
                </div>
             </div>
          ) : (
-            <p>Ви ще не зробили замовлення</p>
+            <p>You have not yet placed an order</p>
          )}
       </>
    );

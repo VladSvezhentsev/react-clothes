@@ -39,7 +39,7 @@ function Card({ obj }) {
          </div>
          <span>{obj.name}</span>
          <div className="card__footer">
-            <span>{obj.price} ₴</span>
+            <span>{obj.price} $</span>
             <Link to={`/item/${obj.id}`}>
                <img src="../img/cart.svg" alt="cart" />
             </Link>

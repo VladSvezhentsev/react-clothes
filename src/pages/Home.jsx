@@ -4,7 +4,7 @@ import { Card, LoadingBlock, Info, Carousel, SortPopup } from "../components";
 import { fetchClothes } from "../redux/actions/clothes";
 import { setFilterBy, setSortBy } from "../redux/actions/filters";
 
-const headings = ["Чоловікам", "Жінкам"];
+const headings = ["For men", "For women"];
 
 function Home() {
    const dispatch = useDispatch();
@@ -43,7 +43,7 @@ function Home() {
                <form>
                   <input
                      onChange={onChangeSearchInput}
-                     placeholder="Пошук..."
+                     placeholder="Search..."
                   />
                </form>
             </div>

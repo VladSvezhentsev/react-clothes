@@ -1,16 +1,15 @@
 function Payment() {
    return (
       <div>
-         <p>Ви можете сплатити замовлення:</p>
+         <p> You can pay for the order: </p>
          <ol>
             <li>
-               Готівкою кур'єру або в пункті видачі при отриманні замовлення
+               Cash courier or at the point of issue upon receipt of the order
             </li>
             <li>
-               Банківською карткою Visa, Mastercard через сайт при оформленні
-               замовлення
+               Visa, Mastercard bank card through the site at registration order
             </li>
-            <li>Післяплатою при замовленні з доставкою Нової Пошти</li>
+            <li> Postpaid when ordering with delivery of Nova Poshta </li>
          </ol>
       </div>
    );

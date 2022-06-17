@@ -9,7 +9,7 @@ export const fetchClothes = (filterBy, sortBy) => (dispatch) => {
    dispatch(setLoaded(false));
    axios
       .get(
-         `/clothes?gender=${filterBy}&_sort=${sortBy.type}&_order=${sortBy.order}`
+         `https://62ab5d36a62365888bdacf17.mockapi.io/items?gender=${filterBy}&sortBy=${sortBy.type}&order=${sortBy.order}`
       )
       .then(({ data }) => {
          dispatch(setClothes(data));

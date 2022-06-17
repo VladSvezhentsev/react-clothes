@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const items = [
-   { name: "популярності", type: "popular", order: "desc" },
-   { name: "ціні", type: "price", order: "desc" },
-   { name: "назві", type: "name", order: "asc" },
+   { name: "popularity", type: "popular", order: "desc" },
+   { name: "price", type: "price", order: "desc" },
+   { name: "name", type: "name", order: "asc" },
 ];
 
 function SortPopup({ sortBy, onClickSortType }) {
@@ -32,7 +32,7 @@ function SortPopup({ sortBy, onClickSortType }) {
       <div ref={sortRef} className="sort">
          <div className="sort__label">
             <i className="fas fa-sort"></i>
-            <b>Cортуваня по:</b>
+            <b>Sort by:</b>
             <span onClick={toggleVisiblePopup}>{activeLabel}</span>
          </div>
          {visiblePopup && (

@@ -55,10 +55,10 @@ function Item() {
          <div className="item__info">
             <div className="info__header">
                <h2>{chosenItem.name}</h2>
-               <h1>{chosenItem.price} ₴</h1>
+               <h1>{chosenItem.price} $</h1>
             </div>
             <div className="info__size">
-               <span>Розмір</span>
+               <span>Size</span>
                <div className="buttons">
                   {availableSizes.map((size, index) => (
                      <button
@@ -77,19 +77,18 @@ function Item() {
                      <button onClick={onMinusItem}>-</button>
                      <Link to="/cart">
                         <button>
-                           В корзині{" "}
+                           In cart{" "}
                            {cartItems[chosenItem.id] &&
-                              cartItems[chosenItem.id].items.length}{" "}
-                           шт
+                              cartItems[chosenItem.id].items.length}
                            <br />
-                           Перейти
+                           Go
                         </button>
                      </Link>
                      <button onClick={onClickAddClothes}>+</button>
                   </div>
                ) : (
                   <button onClick={onClickInCart} className="btn-cart">
-                     В корзину
+                     In cart
                   </button>
                )}
                <button className="btn-fav">
@@ -105,7 +104,7 @@ function Item() {
             </div>
             <div className="info__main">
                <div className="main__description">
-                  <p>Опис</p>
+                  <p>Description</p>
                </div>
                <div className="description">
                   <span>
@@ -115,14 +114,14 @@ function Item() {
                   </span>
                </div>
                <div className="main__feature">
-                  <p>Характеристики</p>
+                  <p>Features</p>
                   <div className="feature">
                      <div className="feature__country">
-                        <span>Країна:</span>
+                        <span>Country:</span>
                         <span>{chosenItem.country}</span>
                      </div>
                      <div className="feature__material">
-                        <span>Склад:</span>
+                        <span>Fabric:</span>
                         <span>{chosenItem.fabric}</span>
                      </div>
                   </div>

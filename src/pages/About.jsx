@@ -1,34 +1,35 @@
 function About() {
    return (
       <>
-         <h1>Про команію</h1>
+         <h1>About the company</h1>
          <div>
-            <b>Інернет магазин React Clothes - коли ціна відповідає якості!</b>
+            <b>
+               React Clothes online store - when the price matches the quality!
+            </b>
             <p>
-               Ми раді запропонувати вам якісні товари з детальними описами,
-               характеристиками та фотографіями. У нас Ви можете купити
-               найкращий одяг у вашому регіоні за цінами виробників та без
-               націнки.
+               We are pleased to offer you quality products with detailed
+               descriptions, characteristics and photos. You can buy from us the
+               best clothes in your area at producer prices and without margins.
             </p>
             <p>
-               Ми доставимо ваше замовлення безкоштовно в будь-який куточок
-               світу, здійснимо докладну консультацію щодо товарів та допоможемо
-               з вибором.
+               We will deliver your order free of charge to any corner world, we
+               will provide detailed advice on goods and help with a choice.
             </p>
-            <p>Наші головні переваги:</p>
+            <p>Our main advantages:</p>
             <ul>
-               <li>Низькі ціни від виробників</li>
-               <li>Доставка по місту в день замовлення</li>
+               <li>Low prices from manufacturers</li>
+               <li>Delivery in the city on the day of the order </li>
                <li>
-                  Доставка замовлень Новою Поштою по всій країні за 2-3 дня
+                  Delivery of orders by Nova Poshta across the country in 2-3
+                  days
                </li>
-               <li>Тільки оригінальна та сертифікована продукція</li>
-               <li>Гарантія на всі товари – 5 років!</li>
+               <li> Only original and certified products </li>
+               <li> Warranty on all products - 5 years! </li>
                <li>
-                  Не сподобався товар? Повернемо або обміняємо протягом 14 днів
-                  без оформлення зайвих паперів!
+                  Didn't like the product? We will return or exchange within 14
+                  days without registration of superfluous papers!
                </li>
-               <li>Бонуси та знижки для постійних покупців</li>
+               <li> Bonuses and discounts for regular customers </li>
             </ul>
          </div>
       </>

@@ -1,31 +1,26 @@
 function Delivery() {
    return (
       <>
-         <h1>Доставка</h1>
+         <h1> Shipping </h1>
          <div>
-            <p>
-               Наш інтернет-магазин здійснює доставку по Україні та її облястям:
-            </p>
+            <p>Our online store delivers in Ukraine and its regions:</p>
             <ol>
-               <li>Кур'єрська доставка по Вінниці - 30 грн.</li>
+               <li> Courier delivery in Vinnytsia - 30 ₴</li>
                <li>
-                  Самовивіз із нашого пункту видачі або роздрібного магазину –
-                  безкоштовно!
+                  Self-pickup from our point of delivery or retail store - free!
                </li>
-               <li>Поштова доставка по Україні - від 50 грн.</li>
+               <li> Postal delivery in Ukraine - from 50 ₴</li>
             </ol>
-            <p>Терміни доставки:</p>
+            <p> Delivery time: </p>
             <ol>
-               <li>Кур'єрська доставка по Вінниці – наступного дня</li>
-               <li>Самовивіз – у день замовлення</li>
+               <li> Courier delivery in Vinnytsia - next day </li>
+               <li> Self-pickup - on the day of the order </li>
                <li>
-                  Доставка замовлень Новою Поштою по всій країні за 2-3 дня
+                  Delivery of orders by Nova Poshta across the country in 2-3
+                  days
                </li>
             </ol>
-            <b>
-               Доставка здійснюється безкоштовно за сумою замовлення більше 3000
-               гривень
-            </b>
+            <b>Delivery is free for orders over 100 $</b>
          </div>
       </>
    );

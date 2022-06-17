@@ -6,7 +6,7 @@ function Favorites() {
 
    return (
       <div>
-         <h2>Мої закладки</h2>
+         <h2>My bookmarks</h2>
          {items.length ? (
             <div className="content__cards">
                {items.map((obj) => (
@@ -14,7 +14,7 @@ function Favorites() {
                ))}
             </div>
          ) : (
-            <p>Ваш список закладок порожній</p>
+            <p>Your bookmark list is empty</p>
          )}
       </div>
    );

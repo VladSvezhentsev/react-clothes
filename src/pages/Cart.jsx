@@ -20,7 +20,7 @@ function Cart() {
 
    return (
       <>
-         <h2>Корзина</h2>
+         <h2>Cart</h2>
          {totalCount ? (
             <div className="cart-container">
                <div className="cart-block">
@@ -38,24 +38,22 @@ function Cart() {
                </div>
                <div className="cart__payment">
                   <div className="payment__products">
-                     <div>Товари ({totalCount})</div>
-                     <div>{totalPrice} ₴</div>
+                     <div>Amount ({totalCount})</div>
+                     <div>{totalPrice} $</div>
                   </div>
                   <div className="payment__total">
-                     <div>Всього:</div>
+                     <div>Total:</div>
                      <div>{totalPrice} ₴</div>
                   </div>
                   <div>
                      <Link to="/order">
-                        <button className="btn-cart">
-                           Оформити замовлення
-                        </button>
+                        <button className="btn-cart">To order</button>
                      </Link>
                   </div>
                </div>
             </div>
          ) : (
-            <p>Ваша корзина порожня</p>
+            <p>Your cart is empty</p>
          )}
       </>
    );

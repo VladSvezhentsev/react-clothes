@@ -5,34 +5,34 @@ function NavBar({ onClose }) {
       <div className="overlay">
          <nav className="navbar">
             <h1>
-               Меню <i onClick={onClose} className="fas fa-times"></i>
+               Menu <i onClick={onClose} className="fas fa-times"></i>
             </h1>
             <ul>
                <li>
                   <Link onClick={onClose} to="/about">
-                     Про компанію
+                     About
                   </Link>
                </li>
                <li>
                   <Link onClick={onClose} to="/contacts">
-                     Контакти
+                     Contacts
                   </Link>
                </li>
                <li>
                   <Link onClick={onClose} to="/delivery">
-                     Доставка
+                     Delivery
                   </Link>
                </li>
                <li>
                   <Link onClick={onClose} to="/payment">
-                     Оплата
+                     Payment
                   </Link>
                </li>
             </ul>
             <div className="contacts">
-               <h3>Контакти</h3>
+               <h3>Contacts</h3>
                <p>097-92-45-281</p>
-               <p>м. Вінниця, вул. Центральна 44</p>
+               <p>Vinnytsia, Central st. 44</p>
             </div>
             <div className="navbar__icons">
                <i className="fab fa-facebook"></i>

@@ -9,7 +9,7 @@ function OrderItem({ item, totalCount }) {
          </div>
          <div className="item__price">
             <span>
-               {totalCount} x <b>{item.price} ₴</b>
+               {totalCount} x <b>{item.price} $</b>
             </span>
          </div>
       </div>
